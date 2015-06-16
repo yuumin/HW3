@@ -1,5 +1,4 @@
 
-/*find most linked page*/
 #include <stdio.h>
 #include <stdlib.h>
 # include <string.h>
@@ -97,7 +96,7 @@ int main(void){
  int i,j,dumy,k,rank;
 	int count=0;
 	int a[1000];
-	int id[1000];
+	int id[1483277];
 	
     n=-1;    //inithiarize by -1
     read_linkfile("links.txt"); //read links
@@ -114,10 +113,9 @@ int main(void){
 	
     for(i=0;i<SIZE2;i++){ //for all pages
        if(strstr(table2[i].word,str1)!=NULL){/*check if the word is included*/
-	 	printf("%s\n",table2[i].word);
-       	a[count]=num_linked[i];
-        count+=1;
-       	id[i]=i;
+	 	a[count]=num_linked[i];
+		id[count]=i;
+		count+=1;
        }
        else{
        }
@@ -137,6 +135,6 @@ int main(void){
 			k=id[i];
 			rank=i;
 			printf("rank%d ",rank);
-			printf("%s\n",i,table2[k].word);
+			printf("%s\n",table2[k].word);
 	}
 }
