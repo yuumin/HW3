@@ -126,6 +126,9 @@ int main(void){
 					dumy = a[i];
 					a[i] = a[j];
 					a[j] = dumy;
+					dumy=id[i];
+					id[i]=id[j];
+					id[j]=dumy;
 					}
 				else{
 				}
@@ -134,7 +137,7 @@ int main(void){
 		for(i=0;i<10;i++){
 			k=id[i];
 			rank=i;
-			printf("rank%d ",rank);
+			printf("rank%d ",rank+1);
 			printf("%s\n",table2[k].word);
 	}
 }
